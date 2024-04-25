@@ -12,6 +12,7 @@ const Register = () => {
         const image = e.target.image.value
         const email = e.target.email.value
         const password = e.target.password.value
+        console.log(name,image);
         // user registration
         userRegister(email, password)
             .then(result => {
