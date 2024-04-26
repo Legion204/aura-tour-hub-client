@@ -2,6 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/aura-tour-hub-logo.png"
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
+import man from "../assets/man.png"
 
 
 const NavBar = () => {
@@ -24,7 +25,7 @@ const NavBar = () => {
         document.querySelector('html').setAttribute('data-theme',localTheme);
     },[theme]);
 
-    const { user } = useContext(AuthContext);
+    const { user,userLogout } = useContext(AuthContext);
     console.log(user);
 
     const navLinks = <div className=" flex flex-col lg:flex-row gap-5 text-xl font-Work">
@@ -71,17 +72,17 @@ const NavBar = () => {
                         user ?
                             <div className="dropdown dropdown-hover dropdown-bottom dropdown-end">
                                 <div tabIndex={0} role="button" className="m-1 w-10 rounded-full">
-                                    <img className="rounded-full" alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                                    <img className="rounded-full" alt="photo url" src={user.photoURL? user?.photoURL : man } />
                                 </div>
                                 <ul tabIndex={0} className="dropdown-content z-[2] menu p-2 shadow bg-base-100 rounded-box w-52">
-                                    <li><a>{user?.email}</a></li>
-                                    <li><a>Log Out</a></li>
+                                    <li><a>{user?.displayName}</a></li>
+                                    <li><a onClick={userLogout}>Log Out</a></li>
                                 </ul>
                             </div> :
 
                             <div className="space-x-3">
-                                <Link className="btn">Log In</Link>
-                                <Link className="btn">Register</Link>
+                                <Link to={"/login"} className="btn">Log In</Link>
+                                <Link to={"/register"} className="btn">Register</Link>
                             </div>
                     }
                 </div>
