@@ -3,6 +3,7 @@ import Root from "../Layouts/Root";
 import Home from "../Pages/Home";
 import Register from "../Pages/Register";
 import LogIn from "../Pages/LogIn";
+import AddTouristSpot from "../Pages/AddTouristSpot";
 
 const router = createBrowserRouter([
     {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
         {
           path:"/login",
           element:<LogIn></LogIn>
+        },
+        {
+          path:"/addtouristspot",
+          element:<AddTouristSpot></AddTouristSpot>
         }
       ]
     },

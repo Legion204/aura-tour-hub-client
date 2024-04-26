@@ -29,9 +29,9 @@ const NavBar = () => {
     console.log(user);
 
     const navLinks = <div className=" flex flex-col lg:flex-row gap-5 text-xl font-Work">
-        <NavLink className={({ isActive }) => isActive ? 'text-accent' : ''} to={'/'}><li className="hover:text-accent">Home</li></NavLink>
-        <NavLink className={({ isActive }) => isActive ? 'text-accent' : ''} to={'/update_profile'}><li className="hover:text-accent">All Tourists Spot</li></NavLink>
-        <NavLink className={({ isActive }) => isActive ? 'text-accent' : ''} to={'/contact'}><li className="hover:text-accent">Add Tourists Spot</li></NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'text-accent' : ''} to={"/"}><li className="hover:text-accent">Home</li></NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'text-accent' : ''} to={"/update_profile"}><li className="hover:text-accent">All Tourists Spot</li></NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'text-accent' : ''} to={"/addtouristspot"}><li className="hover:text-accent">Add Tourists Spot</li></NavLink>
         <NavLink className={({ isActive }) => isActive ? 'text-accent' : ''} to={'/about_us'}><li className="hover:text-accent">My List</li></NavLink>
     </div>
 
