@@ -1,10 +1,9 @@
 import { useLoaderData } from "react-router-dom";
 import Banner from "../Components/Banner";
 import TouristSpotCard from "../Components/TouristSpotCard";
-import { useState } from "react";
 
 const Home = () => {
-    const [touristSpots,setTouristSpots] = useState(useLoaderData());
+    const touristSpots=useLoaderData()
     return (
         <div>
             {/* banner section */}
