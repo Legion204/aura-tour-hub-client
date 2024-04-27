@@ -1,42 +1,74 @@
+import { useContext } from "react";
+import { AuthContext } from "../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const AddTouristSpot = () => {
 
+    const { user } = useContext(AuthContext)
 
-        const handelAddTouristSpot=e=>{
-            e.preventDefault()
-            const form = e.target;
-            const touristSpotName=form.tourist_spot_name.value 
-            const countryName=form.country_name.value
-            const location=form.location.value 
-            const userEmail=form.user_email.value
-            const userName=form.user_name.value
-            const averageCost=form.average_cost.value
-            const seasonality=form.seasonality.value
-            const travelTime=form.travel_time.value
-            const shortDescription=form.short_description.value
-            const totalVisitorPerYear=form.total_visitor_per_year.value
-            const imageUrl=form.image_url.value
-            const touristSpotData={touristSpotName,countryName,location,userEmail,userName,averageCost,seasonality,travelTime,shortDescription,totalVisitorPerYear,imageUrl};
-            console.log(touristSpotData);
-        }
+
+    const handelAddTouristSpot = e => {
+        e.preventDefault()
+        const form = e.target;
+        const touristSpotName = form.tourist_spot_name.value
+        const countryName = form.country_name.value
+        const location = form.location.value
+        const userEmail = user.email
+        const userName = user.displayName
+        const averageCost = form.average_cost.value
+        const seasonality = form.seasonality.value
+        const travelTime = form.travel_time.value
+        const shortDescription = form.short_description.value
+        const totalVisitorPerYear = form.total_visitor_per_year.value
+        const imageUrl = form.image_url.value
+        const touristSpotData = { touristSpotName, countryName, location, userEmail, userName, averageCost, seasonality, travelTime, shortDescription, totalVisitorPerYear, imageUrl };
+        console.log(touristSpotData);
+        // send data to server
+        fetch("http://localhost:5000/tourist_spots",{
+            method:"POST",
+            headers:{
+                "content-type":"application/json"
+            },
+            body:JSON.stringify(touristSpotData)
+            
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            console.log(data)
+            if(data.acknowledged){
+                Swal.fire({
+                    title:"Tourist spot added to the database!",
+                    icon:"success"
+                });
+            }
+        })
+    }
 
     return (
-        <div className="bg-hero bg-center bg-no-repeat bg-cover">
-            <form onSubmit={handelAddTouristSpot}  className="flex flex-col justify-center space-y-4 mx-10 lg:h-[80svh] overflow-hidden ">
-                <h1 className="text-center font-semibold text-5xl text-white">Add Tourist spot</h1>
-                <div className="grid grid-cols-1 lg:grid-cols-4 items-center gap-5">
+        <div className="bg-hero bg-center bg-no-repeat bg-cover p-10 lg:p-32 w-full">
+            <form onSubmit={handelAddTouristSpot} className="w-full">
+                <h1 className="text-center font-semibold text-5xl text-white mb-6">Add Tourist spot</h1>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center gap-5 m">
 
                     <label className="form-control w-full ">
                         <div className="label">
                             <span className="label-text text-white">Tourist spot name</span>
                         </div>
-                        <input type="text" placeholder="Tourist spot name" name="tourist_spot_name"  className="input input-bordered w-full " />
+                        <input type="text" placeholder="Tourist spot name" name="tourist_spot_name" className="input input-bordered w-full " />
                     </label>
-                    <label className="form-control w-full ">
+                    <label className="form-control w-full">
                         <div className="label">
                             <span className="label-text text-white">Country name</span>
                         </div>
-                        <input type="text" placeholder="Country name" name="country_name" className="input input-bordered w-full " />
+                        <select name="country_name" className="select select-bordered text-[#9CA3B4]">
+                            <option defaultValue={'pick one'}>Pick one</option>
+                            <option value={"France"}>France</option>
+                            <option value={"Italy"}>Italy</option>
+                            <option value={"Spain"}>Spain</option>
+                            <option value={"England"}>England</option>
+                            <option value={"Switzerland"}>Switzerland</option>
+                            <option value={"Netherland"}>Netherland</option>
+                        </select>
                     </label>
 
                     <label className="form-control w-full ">
@@ -45,19 +77,7 @@ const AddTouristSpot = () => {
                         </div>
                         <input type="text" placeholder="Location" name="location" className="input input-bordered w-full " />
                     </label>
-                    <label className="form-control w-full ">
-                        <div className="label">
-                            <span className="label-text text-white">User email</span>
-                        </div>
-                        <input type="text" placeholder="User email" name="user_email" className="input input-bordered w-full " />
-                    </label>
 
-                    <label className="form-control w-full ">
-                        <div className="label">
-                            <span className="label-text text-white">User name</span>
-                        </div>
-                        <input type="text" placeholder="User name" name="user_name" className="input input-bordered w-full " />
-                    </label>
                     <label className="form-control w-full ">
                         <div className="label">
                             <span className="label-text text-white">Average cost</span>
@@ -65,11 +85,17 @@ const AddTouristSpot = () => {
                         <input type="text" placeholder="Average cost" name="average_cost" className="input input-bordered w-full " />
                     </label>
 
-                    <label className="form-control w-full ">
+                    <label className="form-control w-full">
                         <div className="label">
                             <span className="label-text text-white">Seasonality</span>
                         </div>
-                        <input type="text" placeholder="Seasonality" name="seasonality" className="input input-bordered w-full " />
+                        <select name="seasonality" className="select select-bordered text-[#9CA3B4]">
+                            <option defaultValue={"pick one"}>Pick one</option>
+                            <option value={"Summer"}>Summer</option>
+                            <option value={"Autumn"}>Autumn</option>
+                            <option value={"Winter"}>Winter</option>
+                            <option value={"Spring"}>Spring</option>
+                        </select>
                     </label>
                     <label className="form-control w-full ">
                         <div className="label">
@@ -78,28 +104,27 @@ const AddTouristSpot = () => {
                         <input type="text" placeholder="Travel time" name="travel_time" className="input input-bordered w-full " />
                     </label>
 
-                    <label className="form-control w-full lg:col-span-2  ">
+                    <label className="form-control w-full ">
                         <div className="label">
                             <span className="label-text text-white">Short description</span>
                         </div>
                         <input type="text" placeholder="Short description" name="short_description" className="input input-bordered w-full " />
                     </label>
-                    <label className="form-control w-full lg:col-span-2 ">
+                    <label className="form-control w-full ">
                         <div className="label">
                             <span className="label-text text-white">Total visitors per year</span>
                         </div>
                         <input type="text" placeholder="Total visitors per year" name="total_visitor_per_year" className="input input-bordered w-full " />
                     </label>
-                    <label className="form-control w-full lg:col-span-4 ">
+                    <label className="form-control w-full md:col-span-2  lg:col-span-1">
                         <div className="label">
                             <span className="label-text text-white">Image URL</span>
                         </div>
-                        <input type="text" placeholder="Image URL" name="image_url" className="input input-bordered w-full " />
+                        <input type="text" placeholder="Image URL" name="image_url" className="input input-bordered w-full" />
                     </label>
                 </div>
-                <button type="submit" className="btn w-full bg-accent border-none text-white">Add</button>
+                <button type="submit" className="btn w-full bg-accent border-none text-white mt-8">Add</button>
             </form>
-
         </div>
     );
 };
