@@ -32,7 +32,7 @@ const NavBar = () => {
         <NavLink className={({ isActive }) => isActive ? 'text-accent' : ''} to={"/"}><li className="hover:text-accent">Home</li></NavLink>
         <NavLink className={({ isActive }) => isActive ? 'text-accent' : ''} to={"/all_tourist_spots"}><li className="hover:text-accent">All Tourists Spots</li></NavLink>
         <NavLink className={({ isActive }) => isActive ? 'text-accent' : ''} to={"/add_tourist_spot"}><li className="hover:text-accent">Add Tourists Spot</li></NavLink>
-        <NavLink className={({ isActive }) => isActive ? 'text-accent' : ''} to={'/about_us'}><li className="hover:text-accent">My List</li></NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'text-accent' : ''} to={'/my_list'}><li className="hover:text-accent">My List</li></NavLink>
     </div>
 
 
