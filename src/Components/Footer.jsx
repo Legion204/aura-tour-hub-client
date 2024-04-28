@@ -1,10 +1,10 @@
-
+import auraTourHubLogo from "../assets/aura-tour-hub-logo.png"
 const Footer = () => {
     return (
         <div>
             <footer className="footer p-10 bg-accent text-white">
                 <aside>
-                    <img className="w-20" src="/src/assets/aura-tour-hub-logo.png" alt="" />
+                    <img className="w-20" src={auraTourHubLogo} alt="" />
                     <p>Aura Tour Hub<br />Providing reliable service since 2012</p>
                 </aside>
                 <nav>

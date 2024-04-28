@@ -10,7 +10,7 @@ const AllTouristSpots = () => {
        const sortedTouristData= [...touristSpots].sort((a, b) => {
             const costA = parseInt(a.averageCost.replace('$', ''), 10);
             const costB = parseInt(b.averageCost.replace('$', ''), 10);
-            return costB - costA; // Sort in descending order based on average cost
+            return costB - costA;
         });
         setTouristSpots(sortedTouristData);
     }

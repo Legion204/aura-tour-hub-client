@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate, } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
+import { toast } from "react-toastify";
 
 
 const LogIn = () => {
@@ -19,10 +20,14 @@ const LogIn = () => {
         userLogin(email, password)
             .then(result => {
                 console.log(result.user);
+                toast.success("Login successfully")
                 navigate(location?.state ? location.state : "/");
             })
             .catch(error => {
                 console.log(error);
+                if(error){
+                    toast.error("Email/Password does not match")
+                }
             })
     }
 
@@ -30,14 +35,28 @@ const LogIn = () => {
         userLoginGoogle()
             .then(result => {
                 console.log(result.user);
+                toast.success("Login successfully")
                 navigate(location?.state ? location.state : "/");
+            })
+            .then(error=>{
+                console.log(error);
+                if(error){
+                    toast.error("Login Unsuccessful")
+                }
             })
     }
     const handelTwitterLogin = () => {
         userLoginTwitter()
             .then(result => {
                 console.log(result.user);
+                toast.success("Login successfully")
                 navigate(location?.state ? location.state : "/");
+            })
+            .then(error=>{
+                console.log(error.message);
+                if(error){
+                    toast.error("Login Unsuccessful")
+                }
             })
     }
 

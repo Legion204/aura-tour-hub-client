@@ -1,5 +1,9 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
+import SwitzerlandImg from "../../assets/Switzerland.jpg"
+import EnglandImg from "../../assets/England.jpg"
+import FranceImg from "../../assets/France.jpg"
+import ItalyImg from "../../assets/Italy.jpg"
 
 // Import Swiper styles
 import 'swiper/css';
@@ -37,7 +41,7 @@ const Slider = () => {
                             <h1 className='font-semibold xl:text-7xl text-[#4dc296]'>welcome to Aura Tour Hub</h1>
                             <p className="xl:text-3xl text-white">Welcome to AuraTour Hub: Your Gateway to Exceptional Adventures! <br /> Explore, Discover, and Experience the World with Confidence.</p>
                         </div>
-                        <img src="/src/assets/Switzerland.jpg" />
+                        <img src={SwitzerlandImg }/>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
@@ -45,21 +49,21 @@ const Slider = () => {
                         <h1 className='font-semibold text-7xl text-[#4dc296]'>welcome to Aura Tour Hub</h1>
                         <p className="text-3xl text-white">Welcome to AuraTour Hub: Your Gateway to Exceptional Adventures! <br /> Explore, Discover, and Experience the World with Confidence.</p>
                     </div>
-                    <img src="/src/assets/England.jpg" />
+                    <img src={EnglandImg} />
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className='absolute flex flex-col items-center justify-center h-full w-full'>
                         <h1 className='font-semibold text-7xl text-[#4dc296]'>welcome to Aura Tour Hub</h1>
                         <p className="text-3xl text-white">Welcome to AuraTour Hub: Your Gateway to Exceptional Adventures! <br /> Explore, Discover, and Experience the World with Confidence.</p>
                     </div>
-                    <img src="/src/assets/France.jpg" />
+                    <img src={FranceImg} />
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className='absolute flex flex-col items-center justify-center h-full w-full'>
                         <h1 className='font-semibold text-7xl text-[#4dc296]'>welcome to Aura Tour Hub</h1>
                         <p className="text-3xl text-white">Welcome to AuraTour Hub: Your Gateway to Exceptional Adventures! <br /> Explore, Discover, and Experience the World with Confidence.</p>
                     </div>
-                    <img src="/src/assets/Italy.jpg" />
+                    <img src={ItalyImg} />
                 </SwiperSlide>
             </Swiper>
         </div>
