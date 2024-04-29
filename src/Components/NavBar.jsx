@@ -26,7 +26,6 @@ const NavBar = () => {
     },[theme]);
 
     const { user,userLogout } = useContext(AuthContext);
-    console.log(user);
 
     const navLinks = <div className=" flex flex-col lg:flex-row gap-5 text-xl font-Work">
         <NavLink className={({ isActive }) => isActive ? 'text-accent' : ''} to={"/"}><li className="hover:text-accent">Home</li></NavLink>

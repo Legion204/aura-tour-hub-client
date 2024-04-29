@@ -18,8 +18,8 @@ const AllTouristSpots = () => {
     return (
         <div className=" mb-5">
             <div className="text-center w-3/4 mx-auto my-10 space-y-3">
-                <h1 className="font-semibold text-5xl">All Tourist Spots</h1>
-                <p>Discover the worlds most captivating tourist spots, each offering its own unique charm and allure. From historic landmarks to natural wonders, immerse yourself in the beauty and wonder of these must-visit destinations.</p>
+                <h1 className="font-semibold text-3xl md:text-5xl">All Tourist Spots</h1>
+                <p className="text-sm md:text-base">Discover the worlds most captivating tourist spots, each offering its own unique charm and allure. From historic landmarks to natural wonders, immerse yourself in the beauty and wonder of these must-visit destinations.</p>
                 <details className="dropdown">
                     <summary className=" text-white bg-accent rounded-md p-4 flex gap-2 items-center">Sort by <IoIosArrowDown /></summary>
                     <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">

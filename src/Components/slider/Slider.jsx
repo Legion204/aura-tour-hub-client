@@ -15,6 +15,7 @@ import './sliderStyles.css';
 
 // import required modules
 import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules';
+import { Fade } from 'react-awesome-reveal';
 
 const Slider = () => {
     return (
@@ -24,7 +25,7 @@ const Slider = () => {
                 effect={'fade'}
                 loop={true}
                 autoplay={{
-                    delay: 1500,
+                    delay: 2000,
                     disableOnInteraction: false,
                 }}
                 navigation={true}
@@ -37,31 +38,31 @@ const Slider = () => {
             >
                 <SwiperSlide>
                     <div className='relative'>
-                        <div className='absolute flex flex-col items-center justify-center h-full w-full'>
-                            <h1 className='font-semibold xl:text-7xl text-[#4dc296]'>welcome to Aura Tour Hub</h1>
-                            <p className="xl:text-3xl text-white">Welcome to AuraTour Hub: Your Gateway to Exceptional Adventures! <br /> Explore, Discover, and Experience the World with Confidence.</p>
+                        <div className='absolute flex flex-col items-center justify-center h-full w-full z-10 text-center space-y-5'>
+                            <Fade direction='up'><h1 className='font-extrabold text-5xl xl:text-8xl text-[#4dc296]'>welcome to Aura Tour Hub</h1></Fade>
+                            <Fade direction='down'><p className="xl:text-3xl text-white">Welcome to AuraTour Hub: Your Gateway to Exceptional Adventures! <br /> Explore, Discover, and Experience the World with Confidence.</p></Fade>
                         </div>
-                        <img src={SwitzerlandImg }/>
+                        <img src={SwitzerlandImg} />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className='absolute flex flex-col items-center justify-center h-full w-full'>
-                        <h1 className='font-semibold text-7xl text-[#4dc296]'>welcome to Aura Tour Hub</h1>
-                        <p className="text-3xl text-white">Welcome to AuraTour Hub: Your Gateway to Exceptional Adventures! <br /> Explore, Discover, and Experience the World with Confidence.</p>
+                    <div className='absolute flex flex-col items-center justify-center h-full w-full z-10 text-center space-y-5'>
+                        <Fade direction='up'><h1 className='font-extrabold text-5xl xl:text-8xl text-[#4dc296]'>Journey Beyond Boundaries: Explore Unforgettable Adventures!</h1></Fade>
+                        <Fade direction='down'><p className="xl:text-3xl text-white">Welcome to AuraTour Hub: Your Gateway to Exceptional Adventures! <br /> Explore, Discover, and Experience the World with Confidence.</p></Fade>
                     </div>
                     <img src={EnglandImg} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className='absolute flex flex-col items-center justify-center h-full w-full'>
-                        <h1 className='font-semibold text-7xl text-[#4dc296]'>welcome to Aura Tour Hub</h1>
-                        <p className="text-3xl text-white">Welcome to AuraTour Hub: Your Gateway to Exceptional Adventures! <br /> Explore, Discover, and Experience the World with Confidence.</p>
+                    <div className='absolute flex flex-col items-center justify-center h-full w-full z-10 text-center space-y-5'>
+                        <Fade direction='up'><h1 className='font-extrabold text-5xl xl:text-8xl text-[#4dc296]'>Adventure Awaits: Discover Exotic Destinations!</h1></Fade>
+                        <Fade direction='down'><p className="xl:text-3xl text-white">Welcome to AuraTour Hub: Your Gateway to Exceptional Adventures! <br /> Explore, Discover, and Experience the World with Confidence.</p></Fade>
                     </div>
                     <img src={FranceImg} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className='absolute flex flex-col items-center justify-center h-full w-full'>
-                        <h1 className='font-semibold text-7xl text-[#4dc296]'>welcome to Aura Tour Hub</h1>
-                        <p className="text-3xl text-white">Welcome to AuraTour Hub: Your Gateway to Exceptional Adventures! <br /> Explore, Discover, and Experience the World with Confidence.</p>
+                    <div className='absolute flex flex-col items-center justify-center h-full w-full z-10 text-center space-y-5'>
+                        <Fade direction='up'><h1 className='font-extrabold text-5xl xl:text-8xl text-[#4dc296]'>Wanderlust Unleashed: Experience Thrilling Escapes!</h1></Fade>
+                        <Fade direction='down'><p className="xl:text-3xl text-white">Welcome to AuraTour Hub: Your Gateway to Exceptional Adventures! <br /> Explore, Discover, and Experience the World with Confidence.</p></Fade>
                     </div>
                     <img src={ItalyImg} />
                 </SwiperSlide>

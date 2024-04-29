@@ -1,23 +1,30 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import TableRow from "../Components/TableRow";
+import LoadingSpinner from "../Components/LoadingSpinner";
 
 
 const MyList = () => {
     const { user } = useContext(AuthContext);
+    const [loading , setLoading]=useState(true);
     const [myList, setMyList] = useState([]);
     console.log(myList);
 
     useEffect(() => {
+        setLoading(true)
         fetch(`https://aura-tour-hub-server.vercel.app/my_list/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 setMyList(data)
+                setLoading(false)
             })
-    }, [user])
+    }, [user]);
 
     return (
         <div>
+            {
+                loading&& <LoadingSpinner></LoadingSpinner>
+            }
             <div className="overflow-x-auto">
                 <table className="table">
                     {/* head */}

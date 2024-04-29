@@ -6,6 +6,7 @@ import CountryCard from "../Components/CountryCard";
 import Lottie from "lottie-react";
 import reviewAnimation from "../assets/Animation-review.json"
 import planeAnimation from "../assets/plane-animation.json"
+import { AttentionSeeker, Slide } from "react-awesome-reveal";
 
 const Home = () => {
     const touristSpots = useLoaderData();
@@ -25,8 +26,8 @@ const Home = () => {
             {/* Tourists Spots Section */}
             <div className="mt-32">
                 <div className=" w-3/4 ml-6 my-10 space-y-3">
-                    <h1 className="font-extrabold text-5xl">Popular Tour Package</h1>
-                    <p>Discover the essence of your dream Destination with our popular tour package, meticulously curated to offer you an unforgettable experience. Immerse yourself in the rich culture, stunning landscapes, and iconic landmarks of your dream Destination as you embark on a journey of exploration and discovery.</p>
+                    <Slide triggerOnce={true} delay={300}><h1 className="font-extrabold text-5xl">Popular Tour Package</h1></Slide>
+                    <Slide triggerOnce={true}><p>Discover the essence of your dream Destination with our popular tour package, meticulously curated to offer you an unforgettable experience. Immerse yourself in the rich culture, stunning landscapes, and iconic landmarks of your dream Destination as you embark on a journey of exploration and discovery.</p></Slide>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                     {
@@ -39,8 +40,8 @@ const Home = () => {
             {/* country section */}
             <div className="mt-32">
                 <div className=" w-3/4 ml-6 my-10 space-y-3">
-                    <h1 className="font-extrabold text-5xl">Explore Your Dreamed Destination</h1>
-                    <p>Discover the World: Embark on an Unforgettable Journey to Explore Your Dreamed Destination</p>
+                    <Slide triggerOnce={true} delay={300}><h1 className="font-extrabold text-5xl">Explore Your Dreamed Destination</h1></Slide>
+                    <Slide triggerOnce={true}><p>Discover the World: Embark on an Unforgettable Journey to Explore Your Dreamed Destination</p></Slide>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                     {
@@ -54,8 +55,8 @@ const Home = () => {
             <div className="mt-32">
                 <div>
                     <div className=" w-3/4 ml-6 my-10 space-y-3">
-                        <h1 className="font-extrabold text-5xl">What Our Client Say About Us</h1>
-                        <p>Discover the essence of your dream Destination with our popular tour package, meticulously curated to offer you an unforgettable experience. Immerse yourself in the rich culture, stunning landscapes, and iconic landmarks of your dream Destination as you embark on a journey of exploration and discovery.</p>
+                        <Slide triggerOnce={true} delay={300}><h1 className="font-extrabold text-5xl">What Our Client Say About Us</h1></Slide>
+                        <Slide triggerOnce={true}><p>Discover the essence of your dream Destination with our popular tour package, meticulously curated to offer you an unforgettable experience. Immerse yourself in the rich culture, stunning landscapes, and iconic landmarks of your dream Destination as you embark on a journey of exploration and discovery.</p></Slide>
                     </div>
                 </div>
                 <div>
@@ -118,8 +119,8 @@ const Home = () => {
             <div className="mt-32">
                 <div>
                     <div className=" w-3/4 ml-6 my-10 space-y-3">
-                        <h1 className="font-extrabold text-5xl">Subscribe to stay connected with us</h1>
-                        <p>Discover the essence of your dream Destination with our popular tour package, meticulously curated to offer you an unforgettable experience. Immerse yourself in the rich culture, stunning landscapes, and iconic landmarks of your dream Destination as you embark on a journey of exploration and discovery.</p>
+                        <Slide delay={300} triggerOnce={true}><h1 className="font-extrabold text-5xl">Subscribe to stay connected with us</h1></Slide>
+                        <Slide triggerOnce={true}><p>Discover the essence of your dream Destination with our popular tour package, meticulously curated to offer you an unforgettable experience. Immerse yourself in the rich culture, stunning landscapes, and iconic landmarks of your dream Destination as you embark on a journey of exploration and discovery.</p></Slide>
                     </div>
                 </div>
                 <section className="py-6 bg-sky-300 dark:text-gray-900">
@@ -130,10 +131,12 @@ const Home = () => {
                             <p className="text-lg">Subscribe to get Exclusive and Exciting Offers</p>
                         </div>
                         <div className="flex flex-row items-center self-center justify-center flex-shrink-0 shadow-md lg:justify-end">
-                            <div className="flex flex-row">
-                                <input type="text" placeholder="example@email.com" className="w-3/5 p-3 rounded-l-lg sm:w-2/3" />
-                                <button type="button" className="w-2/5 p-3 font-semibold rounded-r-lg sm:w-1/3 bg-accent text-white">Subscribe</button>
-                            </div>
+                            <AttentionSeeker effect="wobble">
+                                <div className="flex flex-row">
+                                    <input type="text" placeholder="example@email.com" className="w-3/5 p-3 rounded-l-lg sm:w-2/3" />
+                                    <button type="button" className="w-2/5 p-3 font-semibold rounded-r-lg sm:w-1/3 bg-accent text-white">Subscribe</button>
+                                </div>
+                            </AttentionSeeker>
                         </div>
                     </div>
                 </section>

@@ -64,7 +64,7 @@ const LogIn = () => {
         <div>
             <div className=" bg-hero hero min-h-screen">
                 <div className="hero-content flex-col lg:flex-row">
-                    <div className="text-center lg:text-left text-black">
+                    <div className="text-center lg:text-left text-white">
                         <h1 className="text-5xl font-bold">Welcome to Aura Tour Hub </h1>
                         <p className="py-6">Please Log In to use your account.</p>
                     </div>
