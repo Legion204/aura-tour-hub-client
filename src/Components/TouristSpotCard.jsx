@@ -20,7 +20,7 @@ const TouristSpotCard = ({ touristSpot }) => {
                     </div>
                     <div className="card-actions items-center">
                         <Link to={`/tourist_spot_details/${_id}`}><button className="btn bg-accent text-white">View details</button></Link>
-                        <p className="flex flex-col text-start text-xl font-medium pl-24 lg:pl-44">Average Cost <span className="text-accent">{averageCost}</span></p>
+                        <p className="flex flex-col text-start text-xl font-medium pl-24 2xl:pl-44">Average Cost <span className="text-accent">{averageCost}</span></p>
                     </div>
                 </div>
             </div>
