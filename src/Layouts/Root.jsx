@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const Root = () => {
     return (
         <div className="container mx-auto">
-            <NavBar></NavBar>
+            <div className="sticky top-0 z-50 "><NavBar></NavBar></div>
             <Outlet></Outlet>
             <ToastContainer></ToastContainer>
             <Footer></Footer>

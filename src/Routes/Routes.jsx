@@ -9,6 +9,7 @@ import PrivetRoute from "./PrivetRoute";
 import TouristSpotDetails from "../Pages/TouristSpotDetails";
 import MyList from "../Pages/MyList";
 import UpdateTouristSpot from "../Pages/UpdateTouristSpot";
+import CountryTouristSpots from "../Pages/CountryTouristSpots";
 
 const router = createBrowserRouter([
   {
@@ -50,6 +51,11 @@ const router = createBrowserRouter([
         path: "/update_tourist_spot/:id",
         element: <PrivetRoute><UpdateTouristSpot></UpdateTouristSpot></PrivetRoute>,
         loader: ({ params }) => fetch(`https://aura-tour-hub-server.vercel.app/tourist_spots/${params.id}`)
+      },
+      {
+        path: "/country_tourist_spots/:id",
+        element: <CountryTouristSpots></CountryTouristSpots>,
+        loader: ({ params }) => fetch(`https://aura-tour-hub-server.vercel.app/countries/${params.id}`)
       }
     ]
   },
