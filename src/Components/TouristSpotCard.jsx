@@ -8,7 +8,7 @@ const TouristSpotCard = ({ touristSpot }) => {
 
     return (
         <div className="justify-self-center">
-            <div className="card card-compact w-96 lg:w-[450px] h-[450px] bg-base-100 shadow-xl">
+            <div className="card card-compact w-96 2xl:w-[450px] h-[450px] bg-base-100 shadow-xl">
                 <figure><img src={imageUrl} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title text-3xl">{touristSpotName}</h2>
