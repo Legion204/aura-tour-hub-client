@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import CountryCard from "../Components/CountryCard";
 import Lottie from "lottie-react";
 import reviewAnimation from "../assets/Animation-review.json"
+import planeAnimation from "../assets/plane-animation.json"
 
 const Home = () => {
     const touristSpots = useLoaderData();
@@ -62,7 +63,7 @@ const Home = () => {
                         <div className="container px-6 py-12 mx-auto">
                             <div className="grid items-center gap-4 xl:grid-cols-5">
                                 <div className="max-w-2xl mx-auto my-8 space-y-4 text-center xl:col-span-2 xl:text-left">
-                                <Lottie animationData={reviewAnimation} loop={true} />;
+                                    <Lottie animationData={reviewAnimation} loop={true} />;
                                 </div>
                                 <div className="p-6 xl:col-span-3">
                                     <div className="grid gap-4 md:grid-cols-2">
@@ -112,6 +113,30 @@ const Home = () => {
                         </div>
                     </section>
                 </div>
+            </div>
+            {/* subscribe section */}
+            <div className="mt-32">
+                <div>
+                    <div className=" w-3/4 ml-6 my-10 space-y-3">
+                        <h1 className="font-extrabold text-5xl">Subscribe to stay connected with us</h1>
+                        <p>Discover the essence of your dream Destination with our popular tour package, meticulously curated to offer you an unforgettable experience. Immerse yourself in the rich culture, stunning landscapes, and iconic landmarks of your dream Destination as you embark on a journey of exploration and discovery.</p>
+                    </div>
+                </div>
+                <section className="py-6 bg-sky-300 dark:text-gray-900">
+                    <div className="container mx-auto flex flex-col justify-center p-4 space-y-8 md:p-10 lg:space-y-0 lg:space-x-12 lg:justify-around lg:flex-row">
+                        <div className="flex flex-col items-center space-y-4 text-center lg:text-left">
+                            <Lottie className="w-60" animationData={planeAnimation} loop={true} />
+                            <h1 className="text-5xl font-bold leading-none">Stay With Us</h1>
+                            <p className="text-lg">Subscribe to get Exclusive and Exciting Offers</p>
+                        </div>
+                        <div className="flex flex-row items-center self-center justify-center flex-shrink-0 shadow-md lg:justify-end">
+                            <div className="flex flex-row">
+                                <input type="text" placeholder="example@email.com" className="w-3/5 p-3 rounded-l-lg sm:w-2/3" />
+                                <button type="button" className="w-2/5 p-3 font-semibold rounded-r-lg sm:w-1/3 bg-accent text-white">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
     );

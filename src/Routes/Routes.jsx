@@ -10,16 +10,18 @@ import TouristSpotDetails from "../Pages/TouristSpotDetails";
 import MyList from "../Pages/MyList";
 import UpdateTouristSpot from "../Pages/UpdateTouristSpot";
 import CountryTouristSpots from "../Pages/CountryTouristSpots";
+import ErrorPage from "../Pages/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement:<ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("https://aura-tour-hub-server.vercel.app/tourist_spots")
+        loader: () => fetch("https://aura-tour-hub-server.vercel.app/tourist_spots"),
       },
       {
         path: '/register',

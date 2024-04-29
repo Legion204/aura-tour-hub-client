@@ -44,7 +44,7 @@ const UpdateTouristSpot = () => {
     return (
         <div className="bg-hero bg-center bg-no-repeat bg-cover p-10 lg:p-32 w-full">
             <form onSubmit={handelUpdateTouristSpot} className="w-full">
-                <h1 className="text-center font-semibold text-5xl text-white mb-6">Add Tourist spot</h1>
+                <h1 className="text-center font-semibold text-5xl text-white mb-6">Update Tourist spot</h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center gap-5 m">
 
                     <label className="form-control w-full ">
