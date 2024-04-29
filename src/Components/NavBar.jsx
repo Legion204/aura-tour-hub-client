@@ -81,8 +81,8 @@ const NavBar = () => {
                             </div> :
 
                             <div className="space-x-3">
-                                <Link to={"/login"} className="btn">Log In</Link>
-                                <Link to={"/register"} className="btn">Register</Link>
+                                <Link to={"/login"} className=" btn-accent md:btn p-1 bg-accent rounded-md text-white">Log In</Link>
+                                <Link to={"/register"} className=" md:btn btn-accent p-1 bg-accent rounded-md text-white">Register</Link>
                             </div>
                     }
                 </div>

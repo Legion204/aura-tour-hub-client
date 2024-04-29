@@ -120,7 +120,7 @@ const UpdateTouristSpot = () => {
                         <input type="text" placeholder="Image URL" defaultValue={imageUrl} name="image_url" className="input input-bordered w-full" />
                     </label>
                 </div>
-                <button type="submit" className="btn w-full bg-accent border-none text-white mt-8">Add</button>
+                <button type="submit" className="btn w-full bg-accent border-none text-white mt-8">Update</button>
             </form>
         </div>
     );
