@@ -1,6 +1,7 @@
 # Aura Tour Hub
 
 Live Link: https://aura-tour-hub.web.app/
+
 Server side github repo Link: https://github.com/Legion204/aura-tour-hub-server
 
  Features and characteristics of this website:
