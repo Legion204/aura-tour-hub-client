@@ -1,5 +1,7 @@
 # Aura Tour Hub
 
+Aura Tour Hub is an intuitive hotel management platform designed to streamline operations and enhance guest experiences. Built with a modern and responsive interface, this project leverages React for dynamic user interactions and ensures seamless management of bookings, room availability, and customer service.
+
 Live Link: https://aura-tour-hub.web.app/
 
 Server side github repo Link: https://github.com/Legion204/aura-tour-hub-server
@@ -34,3 +36,9 @@ Server side github repo Link: https://github.com/Legion204/aura-tour-hub-server
     - react tostify
     - lottie react
     - sweetalert2
+- # To run the project locally
+    - copy this git repo and server side repo  
+    - open terminal in vs-code  
+    - type npm run dev to run client side website  
+    - open server side file in vs-code  
+    - open terminal and type nodemon index.js to run the server. (Note: "If nodemon is not istall in your device install it")  
